@@ -1,256 +1,135 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Pic Your Weekend</title>
+        <title>PicYourWeekend | Plan your weekend in 30 seconds</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../img/favicon.ico" />
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" />
+         <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/fmmgljeemhhajnponhffhpjioiclpmbh">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <script type="text/javascript" src="//use.typekit.net/epn4ckh.js"></script>
         <script type="text/javascript">try {
                 Typekit.load();
             } catch (e) {
             }</script>
-        <style type="text/css">
-            .blue {
-                color: #59b8d8;
-            }
-
-
-
-            .green {
-                color: #62d962;
-            }
-
-            .yellow {
-             color: #ffde47;
-            }
-
-            .red {
-            color: #ef540c;
-            }
-
-            html,body {
-                font-family: futura-pt, sans-serif;
-            }
-
-           body { padding-bottom: 70px; }
-
-            .logo {
-                vertical-align: top;
-                padding-top: 60px;
-                padding-bottom: 10px;
-                display: inline-block;
-                padding-right:10px;
-            }
-
-            .page-header {
-                font-size:57px;
-                font-weight: normal;
-                display:inline-block;
-                padding-top:50px;
-                padding-bottom: 10px;
-                border: none;
-                margin:0;
-            }
-
-            .hideme {
-                display: none;
-            }
-
-            .ribbon {
-            background:url('img/ribbon.png') no-repeat right top;
-
-            }
-
-            ul.header-menu {
-            padding-bottom:50px;
-            }
-
-            ul.header-menu li {
-                list-style-type: none;
-                display:inline-block;
-
-                font-size: 16px;
-                padding-left: 20px;
-
-            }
-
-            a {
-                text-decoration: none;
-                color: rgb(160,160,160);
-            }
-            .selected {
-                color:#6c6c6c !important;
-            }
-
-            .jumbotron {
-            background:url('img/video-placeholder.jpg') no-repeat;
-            height:641px;
-            padding-top:192px;
-            }
-
-            .email-in-its-place {
-                color: white !important;
-                font-size:56px !important;
-                font-weight:normal !important;
-                padding-bottom:40px;
-            }
-
-            .get-the-app {
-            background-color: #59b8d8;
-            width:100%;
-
-            color:white;
-            font-size:32px;
-            border:none;
-            }
-
-            .featurette-heading {
-            font-size: 42px !important;
-            font-weight: normal !important;
-            }
-
-            .lead {
-            color:rgb(160,160,160) !important;
-            }
-        </style>
+        <link rel="stylesheet" href="css/signup.css" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+        <script src="js/ua-parser.js"></script>
+    <script src="js/check-extension.js"></script>
+        <script src="js/signup.js"></script>
     </head>
     <body>
+        <div id="fb-root"></div>
         <div class="container">
-            <div class="row ribbon">
+            <div class="row">
 
-                <div class="col-md-6 col-md-offset-3 text-center blue">
+                <div class="col-md-6 col-md-offset-3 text-center">
 
-                    <img class="logo" src="img/logo-blue.png" />
-                    <h1 class="page-header"><span class="hideme">PIC</span>YOUR WEEKEND</h1>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 text-center">
-                        <ul class="header-menu">
-                            <li><a href="#" class="selected">ABOUT</a></li>
-                            <li><a href="#">BLOG</a></li>
-                            <li><a href="#">STORY</a></li>
-                            <li><a href="#">HELP</a></li>
-                            <li><a href="#">JOBS</a></li>
+                    <img class="logo" src="img/logo.png" />
+                    <h1 class="page-header">PicYourWeekend</h1>
+                     <ul class="header-menu">
+                            <li><a href="#">ABOUT</a></li>
+
                             <li><a href="#">CONTACT</a></li>
                         </ul>
-                    </div>
                 </div>
+                <div class="col-md-2 col-md-offset-1 visible-md visible-lg">
+                    <img src="img/red-wax-seal-ribbon.png" class="img-responsive" />
+                </div>
+              
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="jumbotron">
-                        <h1 class="email-in-its-place">Put email in its place.</h1>
+                    <div class="jumbotron video-preview">
 
-                        <p style="width:33%"><a class="btn btn-primary btn-lg get-the-app" role="button">Get the App</a></p>
-                    </div>
-                </div>
-            </div>
-            <hr class="featurette-divider">
-            <div class="row featurette">
-                 <div class="col-md-5 col-md-offset-1">
-                        <img class="featurette-image img-responsive" src="img/fly-through-shot.png" alt="ALB Survey">
-                    </div>
-                <div class="col-md-5">
-                    <h2 class="featurette-heading green">Fly through your email.</h2>
-                    <p class="lead">We redesigned the inbox to make email light, fast, and mobile-friendly. Quickly swipe messages to your archive or trash. Scan an entire conversation at once with chat-like organization. Snooze emails until later with the tap of a button.
-                        <br>It's a whole new inbox.
+                        <h1 id="play-inline" class="play-button visible-md visible-lg"><span class="glyphicon glyphicon-play-circle"></span></h1>
+                        <a href="video/PYW.mp4" target="_blank"><h1 id="play-external" class="play-button visible-sm visible-xs"><span class="glyphicon glyphicon-play-circle"></span></h1></a>
+                        <h1 class="email-in-its-place">Plan your weekend in 30 seconds.</h1>
 
-
-</p>
-                </div>
-
-            </div>
-              <hr class="featurette-divider">
-            <div class="row featurette">
-                 <div class="col-md-5 col-md-offset-1">
-                    <h2 class="featurette-heading blue">Modern tech for an ancient medium.</h2>
-                    <p class="lead">Designed 30 years ago, traditional email transmission is clunky and slow. To make delivery as fast as possible, Mailbox checks your email from the cloud, then delivers it to your phone securely. You can even get push notifications for new messages.
-
-
-</p>
-                </div>
-                 <div class="col-md-5">
-                        <img class="featurette-image img-responsive" src="img/notification-shot.png" alt="ALB Survey" style="float:right">
+                        <p>
+                            <a id="subscribe-with-facebook" class="btn btn-primary btn-lg get-the-app" role="button" ><i class="fa fa-facebook"></i> &nbsp;Subscribe with Facebook</a>
+                        <a id="activate-now" class="btn btn-primary btn-lg get-the-app" role="button" >Activate Now</a>
+                        </p>
                     </div>
 
-
-            </div>
-               <hr class="featurette-divider">
-            <div class="row featurette">
-                 <div class="col-md-5 col-md-offset-1">
-                        <img class="featurette-image img-responsive" src="img/snoozes-shot.png" alt="ALB Survey">
-                    </div>
-                <div class="col-md-5">
-                    <h2 class="featurette-heading yellow">Put it off until tomorrow. <br>
-Or this weekend.<br>
-Or someday.</h2>
-                    <p class="lead">Stop staring at emails you can't deal with now. Mailbox lets you put off messages until later with a swipe and a tap. Snoozed emails return to your inbox automatically, so you can focus on what's important now.
-
-
-</p>
-                </div>
-
-            </div>
-                <hr class="featurette-divider">
-            <div class="row featurette">
-                 <div class="col-md-5 col-md-offset-1">
-                    <h2 class="featurette-heading red">Inbox zero. Daily.</h2>
-                    <p class="lead">When your inbox holds just the stuff you need to address now, email feels lighter and faster. Mailbox makes getting to zero — and staying there — a breeze. After you experience a clean inbox, you'll wonder how you ever lived without it.
-
-</p>
-                </div>
-                 <div class="col-md-5">
-                        <img class="featurette-image img-responsive" src="img/zero-shot.png" alt="ALB Survey" style="float:right">
+                    <div class="jumbotron video">
+                        <button id="close-button" class="btn btn-primary btn-lg">&times;</button>
+                        <video id="video" src="video/PYW.mp4" controls style="width:1140px;height:641px;border-radius:5px"></video> 
                     </div>
 
-
-            </div>
-                  <hr class="featurette-divider">
-            <div class="row featurette" style="padding-bottom:70px">
-                 <div class="col-md-5 col-md-offset-1">
-                        <img class="featurette-image img-responsive" src="img/ipad-illustration.png" alt="ALB Survey">
-                    </div>
-                <div class="col-md-5">
-                    <h2 class="featurette-heading blue">For iPhone/iPad + Gmail. </h2>
-                    <p class="lead">Mailbox is available in the App Store for iPhone and iPad. You can add up to five Gmail or Google Apps accounts to your Mailbox to enjoy a simple, unified inbox. (Yes, we'll support more devices and clients as we grow).
-
-</p> <p><a class="btn btn-primary btn-lg get-the-app" role="button">Get the App</a></p>
                 </div>
-
             </div>
-                  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">&copy; PicYourWeekend</a>
-  </div>
-
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-      <li><a href="#">Privacy</a></li>
-      <li><a href="#">Terms</a></li>
-
-    </ul>
-
-    <ul class="nav navbar-nav navbar-right">
-       <li><a href="#" class="selected">ABOUT</a></li>
-                            <li><a href="#">BLOG</a></li>
-                            <li><a href="#">STORY</a></li>
-                            <li><a href="#">HELP</a></li>
-                            <li><a href="#">JOBS</a></li>
-                            <li><a href="#">CONTACT</a></li>
-
-    </ul>
-  </div><!-- /.navbar-collapse -->
-</nav>
         </div>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+           
+            <div class="col-md-6 col-md-offset-3">
+                <h2 class="featurette-heading" style="text-align:center">Plan your weekend in 30 seconds!</h2>
+                <p class="lead" style="text-align:justify">
+                    Ever wonder what you're gonna do next weekend? Yup, we've all been there. Well, with PicYourWeekend, planning your weekend has never been easier or more fun!<br/><br/>
 
-    </body>
+We deliver personalized events by email, picked just for you, once a week.You can also make and share plans with friends right from your email. It's like your own personal concierge (and it's free).<br/><br/>
+
+So get ready to spend less time planning and more time playing. Thanks for signing up and welcome aboard!
+                    
+                </p>
+            </div>
+
+        </div>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+           
+            <div class="col-md-10 col-md-offset-1">
+                <h2 class="featurette-heading" style="text-align:center">How it works:</h2><br/><br/>
+               <div class="row" style="text-align:center">
+        <div class="col-md-3">
+            <i class="fa fa-facebook fa-4x"></i><br>
+            <h3>1. Log in using Facebook</h3><br>
+            Your privacy is important. We never share, sell, rent, or lease any of your personal
+information to any third parties under any circumstances.<br><br></div>
+        <div class="col-md-3">
+            <i class="fa fa-download fa-4x"></i><br>
+            <h3>2. Activate your inbox</h3><br></div>
+        <div class="col-md-3"><i class="fa fa-envelope fa-4x"></i><br>
+            <h3>3. Check your email</h3><br></div>
+        <div class="col-md-3"><i class="fa fa-heart fa-4x" style="color:#d90e0e"></i><br>
+            <h3>4. Plan your weekend in 30 seconds!</h3><br></div>
+    </div>
+            </div>
+
+        </div>
+        
+        <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">&copy; PicYourWeekend</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">ABOUT</a></li>
+
+                    <li><a href="#">CONTACT</a></li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+
+</body>
 </html>

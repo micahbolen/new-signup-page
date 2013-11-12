@@ -1,0 +1,144 @@
+@font-face { font-family: 'journalregular'; src: url('../../font/journal-webfont.eot'); src: url('../../font/journal-webfont.eot?#iefix') format('embedded-opentype'), url('../../font/journal-webfont.woff') format('woff'), url('../../font/journal-webfont.ttf') format('truetype'), url('../../font/journal-webfont.svg#journalregular') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'gothambook'; src: url('../../font/Gotham-Book.eot'); src: url('../../font/Gotham-Book.eot?#iefix') format('embedded-opentype'), url('../../font/Gotham-Book.woff') format('woff'), url('../../font/Gotham-Book.ttf') format('truetype'), url('../../font/Gotham-Book.svg#journalregular') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'suavescript'; src: url('../../font/Suave Script.eot'); src: url('../../font/Suave Script.eot?#iefix') format('embedded-opentype'), url('../../font/Suave Script.woff') format('woff'), url('../../font/Suave Script.ttf') format('truetype'), url('../../font/Suave Script.svg#journalregular') format('svg'); font-weight: normal; font-style: normal; }
+
+
+.blue {
+    color: #59b8d8;
+}
+
+
+
+.green {
+    color: #62d962;
+}
+
+.yellow {
+    color: #ffde47;
+}
+
+.red {
+    color: #ef540c;
+}
+
+html,body {
+    font-family: futura-pt, sans-serif;
+}
+
+body { padding-bottom: 70px; }
+
+.row {
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.logo {
+    vertical-align: top;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    display: inline-block;
+    padding-right:10px;
+}
+
+.page-header {
+    font-size:69px;
+    font-weight: bold;
+    display:inline-block;
+    padding-top:50px;
+    padding-bottom: 10px;
+    border: none;
+    margin:0;
+    font-family:journalregular;
+}
+
+.hideme {
+    display: none;
+}
+
+
+
+ul.header-menu {
+    padding-bottom:50px;
+    padding-left:0px !important;
+}
+
+ul.header-menu li {
+    list-style-type: none;
+    display:inline-block;
+
+    font-size: 16px;
+    padding-left: 20px;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(160,160,160);
+}
+.selected {
+    color:#6c6c6c !important;
+}
+
+.jumbotron {
+    background:url('../img/nyc_alt.jpg') no-repeat;
+    height:641px;
+    padding-top:192px;
+    
+    text-align:center;
+}
+
+.email-in-its-place {
+    color: white !important;
+    font-size:56px !important;
+    font-weight:normal !important;
+    padding-bottom:40px;
+    text-shadow: 1px 1px 2px black,0 0 1em black,0 0 .2em black;
+}
+
+.get-the-app {
+    background-color: #3276b1;
+    color:white;
+    font-size:32px;
+    border:none;
+}
+
+.featurette-heading {
+    font-size: 42px !important;
+    font-weight: normal !important;
+}
+
+.lead {
+    color:rgb(160,160,160) !important;
+}
+
+.play-button {
+    color:white;
+    text-shadow: 1px 1px 2px black,0 0 1em black,0 0 .2em black;
+    cursor:pointer;
+    display:block;
+}
+
+.glyphicon {
+    color:white;
+}
+
+.video {
+    display:none;
+    padding: 0 !important;
+
+}
+
+#close-button {
+    color:white;
+    position: absolute;
+    left: 1100px;
+    top: 8px;
+    padding: 7px 18px;
+    background-color:black;
+    z-index:1;
+}
+
+#activate-now {
+    background-color: #62d962;
+    display:none;
+}
